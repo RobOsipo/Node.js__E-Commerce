@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
 
 
     res.render('shop', {prods: products, docTitle: 'Shop', path: '/', hasProducts: products.length > 0, activeShop: true, productCSS: true })
-    res.sendFile(path.join(rootDir, 'views', 'shop.html'))
+    // res.sendFile(path.join(rootDir, 'views', 'shop.html'))
 } )
 
 module.exports = router

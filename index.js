@@ -7,13 +7,17 @@ const expressHbs = require('express-handlebars')
 
 const app = express()
 
-app.engine('hbs', expressHbs({layoutsDir: '/views/layouts/', defaultLayout: 'main-layout', extname: 'hbs'}))
-app.set('view engine', 'hbs')
+app.set('view engine', 'ejs')
 
-// switching to handlebars So I commented out how to use the pug engine for reference
+
+// To Switch back to Handlebars I can use these
+// * app.engine('hbs', expressHbs({layoutsDir: '/views/layouts/', defaultLayout: 'main-layout', extname: 'hbs'}))
+// * app.set('view engine', 'hbs')
+
+// To Switch back to Pug I can use these
 // * app.set('view engine', 'pug')
 // Only need this below if template folder is not called views-- (here as a note)
-// * app.set('views', 'views')
+ app.set('views', 'views')
 
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, 'public')))

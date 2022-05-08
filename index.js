@@ -14,7 +14,7 @@ app.set('view engine', 'ejs')
 
 // To Switch back to Pug I can use these
 // * app.set('view engine', 'pug')
-// Only need this below if template folder is not called views-- (here as a note)
+// Only need this below if template folder is not called views-- (here as a reference only)
  app.set('views', 'views')
 
 app.use(bodyParser.urlencoded({extended: false}))

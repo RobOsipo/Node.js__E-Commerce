@@ -21,4 +21,6 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-app.listen(5000);
+app.listen(5000, () => {
+    console.log('listening on 5000')
+});
